@@ -1,0 +1,133 @@
+@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+
+ul {
+    list-style: none;
+}
+li {
+    font-family:sans-serif;
+    font-size: 1.5em;
+    list-style: none;
+}
+input[type=radio] 
+{
+    border: 0px;
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+h1,h2 {
+    text-align: center;
+}
+
+
+ .quizContainer {
+    background-color: cornsilk;
+    border-radius: 6px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding-top: 5px;
+    position: relative;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
+#container {
+    text-align: center;
+}
+.nextButton {
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    background-color: lightgrey;
+    color: black;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    display: inline-block;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.nextButton:hover {
+    background-color: white;
+}
+
+.question {
+    font-family:'Rokkitt', serif;
+    font-size: 2em;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    border-radius: 6px;
+    background-color: bisque;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+.quizMessage {
+    background-color: peachpuff;
+    border-radius: 6px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    font-family:'Rokkitt', serif;
+    color: red;
+}
+.choiceList {
+    font-family: sans-serif;
+    color: black;
+}
+.result {
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+    background-color: linen;
+    margin: auto;
+    text-align: center;
+    font-family:'Rokkitt', serif;
+}
+.resultButton {
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    color: black;
+    position: relative;
+    margin: auto;
+    font-size: 18px;
+    padding: 20px;
+    display: inline-block;
+    background-color: lightgrey;
+    font-family: monospace;
+    font-weight: bold;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.resultButton:hover {
+    background-color: white;
+}
+
+.resultContainer {
+    background-color: lightblue;
+    border-radius: 6px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding-top: 5px;
+    position: relative;
+}
+/* End of Quiz Classes */

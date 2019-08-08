@@ -1,0 +1,79 @@
+<!--
+Simulator for D FF
+It uses finalSimulator.js for the simulator and style.css for the styling of the layout.
+
+It simulates the output waveform when inputs are given to the D flip flop
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Graph Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="WaveDrom.ProcessAll()">
+  <script src="../Libraries/wavedrom/default.js" type="text/javascript"></script>
+  <script src="../Libraries/wavedrom/wavedrom.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="finalSimulator.js"></script>
+  <script type="text/javascript" src="../Libraries/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="simHelper.js"></script>
+  <script type="text/javascript" src="../Libraries/Bootstrap/bootstrap.bundle.min.js"></script>
+
+<div style="text-align: center;">
+    <h1 style="font-size: 3em;">Simulator</h1>
+    <h2>Waveform</h2>
+</div>
+<hr>
+ <div id="helpme">
+   <iframe src="Help.html" height="300" width="1000"></iframe>
+ </div>
+ <div class="box lightblue-box">
+  <div style="text-align: left;">
+
+    <select id="clock" class="erode select">
+      <option value="0" selected disabled hidden>Select the clock type</option>
+      <option value="1">Positive edge Triggered</option>
+      <option value="2">Negative edge Triggered</option>
+    </select>
+    <br>
+    <select id="waveform" class="erode select">
+      <option value="0" selected disabled hidden>Select input waveform</option>
+      <option value="1">Waveform 1</option>
+      <option value="2">Waveform 2</option>
+      <option value="3">Waveform 3</option>
+    </select>
+    <h4 style="display: inline; font-family: Open Sans" class="some-margin">Or make your own waveform:</h4>
+    <input type="text" class="erode text" id="number" placeholder="Enter number of clock pulses">
+    <input type="text" class="erode text" id="line" placeholder="Enter the waveform">
+    <br>
+    <button id="simulate" onclick="myFunction()" class="erode button">Simulate</button>
+  </div>
+
+  <h5 id="wavebox" class="box white-box">
+    <script type="WaveDrom">
+    { signal : 
+    [
+      ['input',
+      { name: "clk",  wave: P },
+        { name: "D",  wave: s },
+      ],
+      ['output',
+        { name: "Q", wave: Q },
+        { name: "Q'", wave: Q0 },
+      ],
+      
+    ],
+    head:{
+       text:'Simulation:',
+       tick:0,
+     },
+    }
+    </script>
+  </h5>
+  <div style="text-align: center;">
+    <button onclick="document.location.reload(false)" class="erode some-margin button">Clear</button>
+    <input type="button" id="helpmeButton" class="erode helpbutton" value="Help" />
+  </div> 
+ </div>
+</body>
+</html>
